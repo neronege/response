@@ -1,0 +1,15 @@
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\bin\MCD\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\bin\MCD\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\bin\MCD\Debug\netcoreapp2.0\NewNewProject.deps.json
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\bin\MCD\Debug\netcoreapp2.0\NewNewProject.runtimeconfig.json
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\bin\MCD\Debug\netcoreapp2.0\NewNewProject.runtimeconfig.dev.json
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\bin\MCD\Debug\netcoreapp2.0\NewNewProject.dll
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\bin\MCD\Debug\netcoreapp2.0\NewNewProject.pdb
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\obj\MCD\Debug\netcoreapp2.0\NewNewProject.csproj.AssemblyReference.cache
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\obj\MCD\Debug\netcoreapp2.0\NewNewProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\obj\MCD\Debug\netcoreapp2.0\NewNewProject.AssemblyInfoInputs.cache
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\obj\MCD\Debug\netcoreapp2.0\NewNewProject.AssemblyInfo.cs
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\obj\MCD\Debug\netcoreapp2.0\NewNewProject.csproj.CoreCompileInputs.cache
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\obj\MCD\Debug\netcoreapp2.0\NewNewProject.dll
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\obj\MCD\Debug\netcoreapp2.0\NewNewProject.pdb
+C:\Users\Egemen_Ozmen\source\repos\NewNewProject\NewNewProject\obj\MCD\Debug\netcoreapp2.0\NewNewProject.genruntimeconfig.cache
