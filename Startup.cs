@@ -37,8 +37,16 @@ namespace NewNewProject
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            else
+            {
+                
+            }
+            app.UseCors(builder =>
+            builder.AllowAnyOrigin()
+            );
             app.UseMvc();
         }
+
+        
     }
 }
