@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NewNewProject.Filters;
 using NewNewProject.Models;
 
 namespace NewNewProject.Controllers
@@ -49,11 +50,13 @@ namespace NewNewProject.Controllers
 
         // POST: api/Category
         [HttpPost]
+        [ValidateModel]
+        [MyException]
         public IActionResult Post([FromBody]CategoryModel model)
         {
             ServiceResponse<Category> response = new ServiceResponse<Category>();
-            if (ModelState.IsValid)
-            {
+
+            
                 var category = new Category
                 {
                     Title = model.Title,
@@ -66,15 +69,15 @@ namespace NewNewProject.Controllers
                 response.IsSuccessFull = true;
 
                 return Ok(response);
-            }
-            else
-            {
-                response.Errors = ModelState.Values.SelectMany(m => m.Errors) //ModelState bütün hataları almak için; Values'e ulaşıldı
+            
+         //   else
+         //   {
+         //       response.Errors = ModelState.Values.SelectMany(m => m.Errors) //ModelState bütün hataları almak için; Values'e ulaşıldı
                                                                               //Errors'a ulaşıyourz, oradan ErrorMessage'a ulaşıp oradan bütün bilgileri oraya response.Errors'a ekledik      
-                    .Select(e => e.ErrorMessage).ToList();
-                response.HasError = true;
-                return BadRequest(response);
-            }
+         //           .Select(e => e.ErrorMessage).ToList();
+        //        response.HasError = true;
+        //        return BadRequest(response);
+        //    }
 
         
           
@@ -82,17 +85,13 @@ namespace NewNewProject.Controllers
         
         // PUT: api/Category/5
         [HttpPut("{id}")]
+        [ValidateModel]
+        [MyException]
         public IActionResult Put(int id, [FromBody]CategoryModel model)
         {
             ServiceResponse<Category> response = new ServiceResponse<Category>();
 
-            if (model==null || model.Id != id)
-            {
-                response.HasError = true;
-                response.Errors.Add("Tutarsız id'ler");
-
-                return BadRequest(response);
-            }
+         
             response.Entity = context.Categories.Find(id);
             if (response.Entity == null)
             {
@@ -116,15 +115,20 @@ namespace NewNewProject.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var item = context.Categories.Find(id);
-            if(item==null)
+           ServiceResponse<Category> response = new ServiceResponse<Category>();
+
+            response.Entity = context.Categories.Find(id);
+            if(response.Entity == null)
             {
-                return NotFound();
+                response.Errors.Add("İd'ye ait veri bulunmadı");
+                response.HasError = true;
+                return NotFound(response);
             }
-            context.Categories.Remove(item);
+            context.Categories.Remove(response.Entity);
             context.SaveChanges();
 
-            return Ok();
+            response.IsSuccessFull = true;
+            return Ok(response);
         }
     }
 }
